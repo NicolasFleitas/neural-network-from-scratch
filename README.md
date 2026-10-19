@@ -22,7 +22,7 @@ Cuando la red falla con una imagen, reparto la culpa así, de atrás hacia adela
 
 Ese estilo de pregunta ("de quién es la culpa por cada salida") se responde una sola vez y **se propaga**: el gradiente de una capa se computa una vez y se reutiliza, en vez de recomputarlo desde cero para cada uno de los ~101 mil pesos (784×128 + 128×10). Por eso backpropagation no es solo *correcto* sino también *barato*: todo el backward cuesta un par de veces el costo del forward, sin importar cuán profunda sea la red.
 
-$$\frac{\partial L}{\partial W} = \frac{\partial L}{\partial P} \cdot \frac{\partial P}{\partial Z} \cdot \frac{\partial Z}{\partial A} \cdot \frac{\partial A}{\partial Z_1} \cdots$$
+El desarrollo completo de estas fórmulas, paso a paso y organizado capa por capa, está en el notebook ([`notebooks/mnist.ipynb`](notebooks/mnist.ipynb), sección 3).
 
 ## Cómo ejecutar el código
 
