@@ -1,0 +1,5 @@
+* text=auto
+
+# Jupyter notebooks: strip outputs/metadata on commit, clean diff rendering
+*.ipynb filter=nbstripout
+*.ipynb diff=ipynb
